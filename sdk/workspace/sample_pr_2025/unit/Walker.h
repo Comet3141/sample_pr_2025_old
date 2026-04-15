@@ -1,10 +1,10 @@
 /******************************************************************************
- * Walker.h (for SPIKE)
- * Created on: 2025/01/05
- * Implementation of the Class Walker
- * Author: Kazuhiro.Kawachi
- * Modifier: Yuki Tsuchitoi
- * Copyright (c) 2025 Embedded Technology Software Design Robot Contest
+ *  Walker.cpp (for SPIKE)
+ *  Created on: 2025/01/05
+ *  Implementation of the Class Walker
+ *  Author: Kazuhiro.Kawachi
+ *  Modifier: Yuki Tsuchitoi
+ *  Copyright (c) 2025 Embedded Technology Software Design Robot Contest
  *****************************************************************************/
 
 #ifndef ETTR_UNIT_WALKER_H_
@@ -14,11 +14,11 @@
 
 class Walker {
 public:
-    static const int RIGHT_TURN = 30;
-    static const int LEFT_TURN = -30;
+    static const int RIGHT_TURN = -30;  //���^�[�����̐���l
+    static const int LEFT_TURN = 30;    //�E�^�[�����̐���l
   
     Walker(spikeapi::Motor& leftWheel,
-           spikeapi::Motor& rightWheel);
+                    spikeapi::Motor& rightWheel);
 
     void init();
     void run();
@@ -29,8 +29,8 @@ private:
     spikeapi::Motor& mRightWheel;
     int mTurn;
 
-    // 条件分岐（#ifndefと#endif）を削除しました
-    const int8_t pwm = 60;  // モーターのPWM値（50～95）
+    const int8_t pwm =95;
+ 
 };
 
 #endif  // ETTR_UNIT_WALKER_H_

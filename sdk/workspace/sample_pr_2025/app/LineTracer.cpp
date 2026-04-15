@@ -7,9 +7,9 @@
 #include <stdio.h> // printf用に追加
 
 // PIDゲインの設定
-const float LineTracer::Kp = 0.8; //0.7~0.85
-const float LineTracer::Ki = 0.02;//0.01~0.03
-const float LineTracer::Kd = 8.0;//7.0~9.0
+const float LineTracer::Kp = 0.83; 
+const float LineTracer::Ki = 0.01;
+const float LineTracer::Kd = 0.1;
 const int   LineTracer::bias = 0;
 
 static int  log_count = 0; // 表示間引き用のカウンタ
